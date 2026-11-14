@@ -18,7 +18,30 @@ Para esto se hará uso de tecnologías como:
 
 El alcanze de este proyecto aun se encuentra en un LocalHost.
 
-## Estructura del proyecto:
+## 🔌 Listado de Endpoints
+
+### Endpoints de Usuarios
+| Método |        Endpoint       |         Descripción        |
+|--------|-----------------------|----------------------------|
+| POST   | `/usuarios`           | Registrar un nuevo usuario |
+| GET    | `/usuarios`           | Listar todos los usuarios  |
+| GET    | `/usuarios/{id}`      | Obtener usuario por ID     |
+| PUT    | `/usuarios/{id}`      | Actualizar usuario         |
+| DELETE | `/usuarios/{id}`      | Eliminar usuario           |
+| POST   | `/usuarios/login`     | Autenticación de usuario   | (Aun en desarrollo)
+
+### Endpoints de Supervisores
+| Método |        Endpoint          |        Descripción         |
+|--------|--------------------------|----------------------------|
+| POST   | `/supervisores`          | Registrar nuevo supervisor |
+| GET    | `/supervisores`          | Listar supervisores        |
+| GET    | `/supervisores/{id}`     | Obtener supervisor por ID  |
+| PUT    | `/supervisores/{id}`     | Actualizar supervisor      |
+
+
+### Estructura del proyecto:
+
+```text
 PROYECTO PRACTICAS/
 │
 ├── 📂 FrontEnd/                  # Interfaz de usuario
@@ -45,23 +68,3 @@ PROYECTO PRACTICAS/
 ├── 📄 package-lock.json          # Historial exacto de dependencias
 └── 📄 README.md                  # Documentación del proyecto
 
-
-## 🔌 Listado de Endpoints
-
-### Endpoints de Usuarios
-| Método |        Endpoint       |         Descripción        |
-|--------|-----------------------|----------------------------|
-| POST   | `/api/usuarios`       | Registrar un nuevo usuario |
-| GET    | `/api/usuarios`       | Listar todos los usuarios  |
-| GET    | `/api/usuarios/{id}`  | Obtener usuario por ID     |
-| PUT    | `/api/usuarios/{id}`  | Actualizar usuario         |
-| DELETE | `/api/usuarios/{id}`  | Eliminar usuario           |
-| POST   | `/api/usuarios/login` | Autenticación de usuario   | (Aun en desarrollo)
-
-### Endpoints de Supervisores
-| Método |        Endpoint          |        Descripción         |
-|--------|--------------------------|----------------------------|
-| POST   | `/api/supervisores`      | Registrar nuevo supervisor |
-| GET    | `/api/supervisores`      | Listar supervisores        |
-| GET    | `/api/supervisores/{id}` | Obtener supervisor por ID  |
-| PUT    | `/api/supervisores/{id}` | Actualizar supervisor      |
