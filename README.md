@@ -67,4 +67,3 @@ PROYECTO PRACTICAS/
 ├── 📄 package.json               # Configuración y dependencias de Node.js
 ├── 📄 package-lock.json          # Historial exacto de dependencias
 └── 📄 README.md                  # Documentación del proyecto
-
