@@ -50,9 +50,24 @@ export const ActualizarUsuario = async (req, res) => {
             return;
     }
 
-    const UsuarioActualizado = await UsuarioService.UsuarioActualizado(parsedId, datos);
+    const UsuarioActualizado = await UsuarioService.ActualizarUsuario(parsedId, datos);
 
     res.json({mensaje: 'Usuario actualizada', usuario: UsuarioActualizado});
 };
 
-export const EliminarUsuario = async (req, res) => {};
+export const EliminarUsuario = async (req, res) => {
+    const { id } = req.params;
+
+    const parsedId = parseInt(id);
+
+    const UsuarioExistente = await UsuarioService.ObtenerUsuarioPorId(parsedId);
+
+    if(!UsuarioExistente) {
+        res.status(400)
+            .json({ message: `Usuario con id ${parsedId} no existe` });
+            return;
+    }
+
+    await UsuarioService.EliminarUsuario(parsedId);
+    res.json({ message: `Usuario con id ${parsedId} eliminada` });
+};
